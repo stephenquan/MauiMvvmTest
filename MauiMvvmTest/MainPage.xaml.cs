@@ -25,6 +25,8 @@ public partial class MainPage : ContentPage
         }
     }
 
+	public string PreviewImageSource => "image.png";
+
     public MainPage()
     {
         InitializeComponent();
