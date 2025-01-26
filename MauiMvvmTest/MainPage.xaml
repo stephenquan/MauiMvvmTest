@@ -10,8 +10,8 @@
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
             <HorizontalStackLayout HorizontalOptions="Center">
-                <CheckBox IsChecked="{Binding IsPreviewVisible, Mode=TwoWay}" />
-                <CheckBox IsChecked="{Binding IsDeleteButtonVisible, Mode=TwoWay}" />
+                <CheckBox IsChecked="{Binding VM.IsPreviewVisible, Mode=TwoWay}" />
+                <CheckBox IsChecked="{Binding VM.IsDeleteButtonVisible, Mode=TwoWay}" />
             </HorizontalStackLayout>
             <ImageButton
                 x:Name="previewImage"
@@ -19,14 +19,14 @@
                 BackgroundColor="Transparent"
                 Clicked="OnDeleteClicked"
                 HeightRequest="48"
-                IsVisible="{Binding IsPreviewVisible}"
+                IsVisible="{Binding VM.IsPreviewVisible}"
                 Source="{Binding PreviewImageSource}"
                 WidthRequest="48" />
             <Button
                 Clicked="OnDeleteClicked"
                 HeightRequest="48"
                 ImageSource="trash_can.png"
-                IsVisible="{Binding IsDeleteButtonVisible}"
+                IsVisible="{Binding VM.IsDeleteButtonVisible}"
                 WidthRequest="48" />
         </VerticalStackLayout>
     </ScrollView>
